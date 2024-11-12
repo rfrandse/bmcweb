@@ -215,6 +215,7 @@ inline void mapRedfishUriToDbusPath(Callback&& callback)
         for (const std::string& chassisName : chassisNames)
         {
             ++counter->second;
+            BMCWEB_LOG_ERROR << "getChassisNames sensors::node::sensors.data: " <<  sensors::node::sensors.data();
             retrieveUriToDbusMap(chassisName, sensors::node::sensors.data(),
                                  handleRetrieveUriToDbusMap);
         }
